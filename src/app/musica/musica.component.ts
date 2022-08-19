@@ -8,14 +8,21 @@ import { ConfigService } from '../config.service';
   styleUrls: ['./musica.component.css']
 })
 export class MusicaComponent implements OnInit {
-  public musical = []
-  music:any
-  constructor(private musicSelection: ConfigService) { }
+  title = 'Pagination';
+  POSTS:any;
+  page: number = 1;
+  count: number = 0;
+  tablesize: number = 10;
+  tablesizes: any = [5,10,15,20];
 
+  constructor(private userService: ConfigService) { }
   ngOnInit(): void {
-    this.musicSelection.getMusic()
-    .subscribe( data => {console.log(data) 
-    this.music = data})
+       this.postList()
   }
-
+  postList():void{
+    this.userService.getAllPosts().subscribe((res) =>{
+        this.POSTS = res
+        console.log(this.POSTS)
+    })
+}
 }

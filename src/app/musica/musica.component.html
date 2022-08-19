@@ -1,11 +1,12 @@
+<h1>Angular Pagination</h1>
+
 <div class="container">
-
-   
-
-    <table class='table'>
+    <table class='table' style="border:none; color:white">
          <thead>
-            <th>Id</th>
-            <th>title</th>
+            <th style="margin-right: 7px">User_id</th>
+            <th style="margin-right: 2px">Post_Id</th>
+            <th class="text-center" style="margin-right: 2px">title</th>
+            <th class="text-center" style="margin-right: 2px">Body</th>
          </thead>
          <tbody>
             <tr 
@@ -17,13 +18,15 @@
             };
             let i = index
             ">
-                 <td>{{post.id}}</td>
-                 <td>{{post.title}}</td>
+                 <td style="border-bottom:none;margin-right: 2px;">{{post.userId}}</td>
+                 <td style="border-bottom:none;margin-right: 2px">{{post.id}}</td>
+                 <td style="border-bottom:none;margin-right: 2px">{{post.title}}</td>
+                 <td style="border-bottom:none;margin-right: 2px">{{post.body}}</td>
             </tr>
          </tbody>
     </table>
 
-   <div>
+   <div style="color:white">
        <pagination-controls
         previousLabel = "previous"
         nextLabel = "next"

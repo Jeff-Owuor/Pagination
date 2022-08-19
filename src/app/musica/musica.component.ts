@@ -25,4 +25,15 @@ export class MusicaComponent implements OnInit {
         console.log(this.POSTS)
     })
 }
+
+  onTableDataChange(event:any){
+      this.page = event;
+      this.postList()
+  }
+  onTableSizeChange(event:any):void{
+    this.tablesize = event.target.value;
+    this.page = 1;
+    this.postList()
+  }
+
 }

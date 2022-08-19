@@ -1,3 +1,16 @@
+<div class="container">
+    <table class='table'>
+         <thead>
+            <th>Id</th>
+            <th>title</th>
+         </thead>
+         <tbody>
+            <tr *ngFor="let post of POSTS">
+                 <td>{{post.id}}</td>
+                 <td>{{post.title}}</td>
+            </tr>
+         </tbody>
+    </table>
+</div>
 
-<img src="{{music.data.images.downsized.url}}">
 
